@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiligenceSquared - Investor-Grade Market Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        company: {
+                            bg: '#fcfcfc',
+                            blue: '#1e40af',
+                            text: '#111111',
+                            gray: '#666666',
+                            light: '#f2f2f2',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Typography Utilities */
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Base animation classes */
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        }
+
+        /* Staggered delays */
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up,
+            .animate-fade-in,
+            .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-company-bg text-company-text antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <header class="w-full border-b border-transparent">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-6 flex justify-between items-center animate-fade-in delay-0">
+            <!-- Logo -->
+            <div class="w-32">
+                <a href="#" class="font-serif text-2xl tracking-wider font-medium text-black">DILIGENCESQUARED</a>
+            </div>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 lg:space-x-12">
+                <a href="#" class="text-sm text-[#334155] hover:text-black transition-colors">Security</a>
+                <a href="#" class="text-sm text-gray-600 hover:text-black transition-colors">Customers</a>
+                <a href="#" class="text-sm text-gray-600 hover:text-black transition-colors">About us</a>
+                <a href="#" class="text-sm text-gray-600 hover:text-black transition-colors">Journal</a>
+                <a href="#" class="text-sm text-gray-600 hover:text-black transition-colors">Careers</a>
+            </nav>
+
+            <!-- Login Button -->
+            <div class="w-32 flex justify-end">
+                <a href="#" class="bg-company-light hover:bg-gray-200 transition-colors text-black text-sm font-medium px-5 py-2.5 rounded-md">
+                    Login
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex flex-col items-center pt-20 md:pt-32 w-full">
+        
+        <!-- Text Content -->
+        <div class="w-full max-w-5xl mx-auto px-4 text-center mb-20 md:mb-28">
+            
+            <!-- Headline -->
+            <h1 class="font-serif text-5xl md:text-6xl lg:text-[5rem] leading-[1.1] tracking-tight text-black mb-6 md:mb-8 text-balance animate-fade-in-up delay-100">
+                Investor-grade market research<br class="hidden md:block" /> delivered in days
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-gray-500 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 md:mb-12 text-pretty animate-fade-in-up delay-200">
+                Fast-track deal validation with AI-moderated interviews and automated synthesis. Tier-1 consulting expertise at the speed of private equity.
+            </p>
+
+            <!-- CTA Button -->
+            <div class="animate-fade-in-up delay-300">
+                <a href="#" class="inline-flex items-center justify-center bg-company-blue hover:bg-blue-800 transition-all duration-300 text-white font-medium text-base px-8 py-4 rounded-md group">
+                    Schedule a Demo
+                    <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="w-full max-w-[1600px] mx-auto px-0 md:px-4 lg:px-8 pb-8 animate-scale-in delay-400">
+            <div class="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden md:rounded-lg">
+                <img 
+                    src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/37a59a38-5c05-45d8-91f3-336b1377c5be/hero-1-img-0-1771014464915.png" 
+                    alt="Two professionals discussing business in a modern office environment" 
+                    class="w-full h-full object-cover"
+                >
+                <!-- Gradient overlay to simulate the slight darkening in the photo if needed, though placeholder handles it -->
+                <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
